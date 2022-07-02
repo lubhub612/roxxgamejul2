@@ -96,7 +96,7 @@ export default function Wallet(props) {
         console.log("WETH", ethers.utils.formatUnits(usdtpoolBalance, 18)); 
         const WETH2 = ethers.utils.formatUnits(usdtpoolBalance, 18);
         const WETH1 = parseFloat(WETH2);
-        const WETH = WETH1.toFixed(18);
+        const WETH = WETH1.toFixed(0);
         setWeth(WETH);
       }
         //console.log("WETH"); 
