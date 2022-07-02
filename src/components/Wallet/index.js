@@ -91,10 +91,14 @@ export default function Wallet(props) {
         await console.log("B", res);
         console.log(res._hex)
       }); */
+      if (accounts){
         const usdtpoolBalance = await  TokenContract.balanceOf(accounts[0]);
         console.log("WETH", ethers.utils.formatUnits(usdtpoolBalance, 18)); 
-        const WETH = ethers.utils.formatUnits(usdtpoolBalance, 18);
+        const WETH2 = ethers.utils.formatUnits(usdtpoolBalance, 18);
+        const WETH1 = parseFloat(WETH2);
+        const WETH = WETH1.toFixed(3);
         setWeth(WETH);
+      }
         //console.log("WETH"); 
     } catch (error) {
       setError(error);
